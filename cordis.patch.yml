@@ -1,0 +1,9 @@
+# dsh-composer-hold bundle patch: one Host-plane row carrying the gate.
+#
+# Do NOT also insert `id: composer-hold` by hand in a profile patch, and do NOT
+# list this bundle as a profile dependency at the same time: two rows sharing
+# one id make id-targeted patches (the plugin-page toggle, any override) hit
+# only one of them. Pick one route (see README).
+- insert:
+    - id: composer-hold
+      name: dsh-composer-hold
